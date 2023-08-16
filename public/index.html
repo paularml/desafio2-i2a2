@@ -84,7 +84,6 @@
                 <button id="sendButton">Enviar</button>
             </div>
             <script>
-                const apiUrl = 'https://quasetarapia.onrender.com/api/chat'
                 document.addEventListener('DOMContentLoaded', () => {
                     const chatBox = document.getElementById('chatBox');
                     const userInput = document.getElementById('userInput');
@@ -123,13 +122,12 @@
                         userInput.value = '';
                     }
                     function fetchMessageFromAI(userMessage) {
-                        const apiUrl = 'https://quasetarapia.onrender.com/api/chat';
-
                         const requestData = {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
-                                'Authorization': `Bearer ${apiKey}`,
+                                // Substitua 'YOUR_API_KEY' pela sua chave de API da OpenAI
+                                'Authorization': `Bearer OPENAI_API_KEY`,
                             },
                             body: JSON.stringify({
                                 model: 'gpt-3.5-turbo',
@@ -142,6 +140,7 @@
 
                         return fetch(apiUrl, requestData);
                     }
+
 
                     function appendMessage(role, content) {
                         const messageDiv = document.createElement('div');
