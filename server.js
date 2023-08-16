@@ -24,7 +24,7 @@ app.get('/api/chat', async (req, res) => {
             model: 'gpt-3.5-turbo',
             messages: [
                 { role: 'user', content: userMessage },
-                { role: 'assistant', content: 'Você é um Psicólogo da linha a Psicologia positiva, e Augusto Cury, e seu nome é Dr. Arthur' }
+                { role: 'assistant', content: 'Você é um Psicólogo da linha terapia cognitiva comportamental' }
             ],
         }),
     };
