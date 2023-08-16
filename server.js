@@ -12,7 +12,7 @@ app.get('/api/chat', async (req, res) => {
         return res.status(400).json({ error: 'Message is required' });
     }
 
-    const apiKey = process.env.API_KEY;
+    const apiKey = process.env.OPENAI_API_KEY; // Corrigido aqui
     const apiUrl = 'https://api.openai.com/v1/chat/completions';
     const requestData = {
         method: 'POST',
